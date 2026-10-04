@@ -1,6 +1,6 @@
 # Aurora Reformas – Trabajo final HTML y CSS
 
-Sitio web de una empresa ficticia de reformas, desarrollado únicamente con HTML5 y CSS3.
+Sitio web de una empresa ficticia de reformas, desarrollado únicamente con HTML5 y CSS3. Para este proyecto final se aplicaron los conceptos aprendidos en las unidades anteriores, se realizó un diseño minimalista respetando las gamas de colores y las buenas practicas aprendidas en las unidades anteriores.
 
 ## Enlaces de entrega
 
