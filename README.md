@@ -4,8 +4,8 @@ Sitio web de una empresa ficticia de reformas, desarrollado únicamente con HTML
 
 ## Enlaces de entrega
 
-- **Repositorio de GitHub:** https://github.com/TU-USUARIO/examen-html  <!-- sustituir por tu URL real -->
-- **Sitio en GitHub Pages:** https://TU-USUARIO.github.io/examen-html/  <!-- sustituir por tu URL real -->
+- **Repositorio de GitHub:** https://github.com/JuanCardona1098/Ejercicio-HTML-y-CSS
+- **Sitio en GitHub Pages:** https://
 
 ## Estructura del proyecto
 
