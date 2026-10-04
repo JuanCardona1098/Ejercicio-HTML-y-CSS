@@ -1,0 +1,494 @@
+/* ==========================================================
+   estilos.css
+   Hoja de estilos única del sitio web de Aurora Reformas.
+   Índice:
+   1. Variables de color
+   2. Reinicio y estilos base
+   3. Layout general (header, main, footer)
+   4. Navegación
+   5. Componentes de la página de inicio
+   6. Galería
+   7. Formulario de presupuesto
+   8. Página de contacto
+   9. Diseño responsive (media queries)
+   ========================================================== */
+
+
+/* ---------- 1. Variables de color ----------
+   Paleta: color principal + su complementario + un neutro,
+   además del blanco y el negro. */
+:root {
+    --color-principal: #0F4C5C;       /* azul petróleo */
+    --color-complementario: #E36414;  /* naranja */
+    --color-neutro: #F4EDE4;          /* crema de fondo */
+    --color-blanco: #FFFFFF;
+    --color-negro: #000000;
+    --color-texto: #1A1A1A;
+}
+
+
+/* ---------- 2. Reinicio y estilos base ---------- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    /* Columna flexible: permite que el footer quede siempre al pie */
+    display: flex;
+    flex-direction: column;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-texto);
+    background-color: var(--color-neutro);
+}
+
+h1,
+h2,
+h3 {
+    color: var(--color-principal);
+    line-height: 1.25;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 2.25rem;
+}
+
+h2 {
+    margin-top: 2.5rem;
+    font-size: 1.6rem;
+    border-bottom: 3px solid var(--color-complementario);
+    padding-bottom: 0.35rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+a {
+    color: var(--color-principal);
+}
+
+a:hover {
+    color: var(--color-complementario);
+}
+
+/* Foco visible para navegación con teclado */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--color-complementario);
+    outline-offset: 2px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* ---------- 3. Layout general ---------- */
+header {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+}
+
+.cabecera {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem 1.25rem;
+}
+
+.logo {
+    color: var(--color-blanco);
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+}
+
+.logo:hover {
+    color: var(--color-blanco);
+}
+
+/* main ocupa todo el espacio libre y empuja al footer hacia abajo */
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 3rem;
+}
+
+footer {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 1.5rem 1.25rem;
+}
+
+footer p {
+    margin: 0.75rem 0 0;
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.redes img {
+    display: block;
+    width: 40px;
+    height: 40px;
+}
+
+.redes a:hover img,
+.redes a:focus-visible img {
+    transform: scale(1.12);
+}
+
+
+/* ---------- 4. Navegación ---------- */
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav a {
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    color: var(--color-blanco);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--color-blanco);
+}
+
+/* Resalta la página en la que se encuentra el usuario */
+nav a[aria-current="page"] {
+    background-color: var(--color-complementario);
+    color: var(--color-negro);
+}
+
+
+/* ---------- 5. Componentes de la página de inicio ---------- */
+.presentacion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.presentacion figure {
+    margin: 0;
+}
+
+.presentacion img {
+    border-radius: 10px;
+}
+
+figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.boton {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    background-color: var(--color-complementario);
+    color: var(--color-negro);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.boton:hover {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+}
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.25rem;
+}
+
+.tarjeta {
+    padding: 1.25rem;
+    background-color: var(--color-blanco);
+    border-top: 5px solid var(--color-complementario);
+    border-radius: 8px;
+}
+
+.tarjeta h3 {
+    margin-top: 0;
+}
+
+.pasos li {
+    margin-bottom: 0.75rem;
+}
+
+.pasos li::marker {
+    color: var(--color-complementario);
+    font-weight: 700;
+}
+
+.contenedor-tabla {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--color-blanco);
+}
+
+caption {
+    padding: 0.5rem;
+    text-align: left;
+    font-style: italic;
+}
+
+th,
+td {
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--color-principal);
+    text-align: left;
+}
+
+thead th {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+}
+
+blockquote {
+    margin: 0;
+    padding: 1rem 1.5rem;
+    background-color: var(--color-blanco);
+    border-left: 6px solid var(--color-complementario);
+    border-radius: 0 8px 8px 0;
+}
+
+blockquote p {
+    margin-top: 0;
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+blockquote footer {
+    padding: 0;
+    background: none;
+    color: var(--color-texto);
+    text-align: left;
+    font-weight: 600;
+}
+
+
+/* ---------- 6. Galería ---------- */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Todas las miniaturas comparten formato y tamaño visual (3:2) */
+.galeria img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    border: 3px solid var(--color-blanco);
+    border-radius: 8px;
+}
+
+.galeria img:hover {
+    border-color: var(--color-complementario);
+}
+
+
+/* ---------- 7. Formulario de presupuesto ---------- */
+.formulario {
+    max-width: 640px;
+    padding: 1.5rem;
+    background-color: var(--color-blanco);
+    border-radius: 10px;
+}
+
+.campo {
+    margin-bottom: 1.25rem;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-weight: 600;
+}
+
+/* Asterisco en las etiquetas de campos obligatorios */
+.obligatorio::after {
+    content: " *";
+    color: var(--color-principal);
+}
+
+.campo input[type="text"],
+.campo input[type="tel"],
+.campo input[type="email"],
+.campo textarea {
+    width: 100%;
+    padding: 0.65rem 0.75rem;
+    border: 2px solid var(--color-principal);
+    border-radius: 6px;
+    font: inherit;
+    color: var(--color-texto);
+    background-color: var(--color-blanco);
+}
+
+.campo textarea {
+    resize: vertical;
+}
+
+/* Campo con contenido no válido: borde discontinuo naranja */
+.campo input:not(:placeholder-shown):invalid {
+    border-color: var(--color-complementario);
+    border-style: dashed;
+}
+
+.campo-check {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+}
+
+.campo-check input {
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-top: 0.25rem;
+    accent-color: var(--color-principal);
+}
+
+.campo-check label {
+    margin: 0;
+    font-weight: 400;
+}
+
+.botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+button {
+    padding: 0.7rem 1.75rem;
+    border: 2px solid var(--color-principal);
+    border-radius: 6px;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+}
+
+button[type="reset"] {
+    background-color: var(--color-blanco);
+    color: var(--color-principal);
+}
+
+button:hover {
+    background-color: var(--color-complementario);
+    border-color: var(--color-complementario);
+    color: var(--color-negro);
+}
+
+
+/* ---------- 8. Página de contacto ---------- */
+.contacto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.contacto figure {
+    margin: 0;
+}
+
+.contacto img {
+    border: 3px solid var(--color-principal);
+    border-radius: 10px;
+}
+
+address {
+    font-style: normal;
+    font-size: 1.1rem;
+}
+
+
+/* ---------- 9. Diseño responsive ---------- */
+@media (max-width: 992px) {
+    .galeria {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .cabecera {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+
+    .presentacion,
+    .contacto {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+
+    button {
+        width: 100%;
+    }
+}

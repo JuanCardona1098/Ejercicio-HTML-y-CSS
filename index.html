@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Aurora Reformas: reformas integrales de viviendas y locales con diseño, calidad y plazos cerrados.">
+        <title>Aurora Reformas | Inicio</title>
+        <!-- Icono del sitio (pestaña del navegador) -->
+        <link rel="icon" href="favicon.ico" sizes="any">
+        <!-- Hoja de estilos única del proyecto -->
+        <link rel="stylesheet" href="css/estilos.css">
+    </head>
+    <body>
+        <!-- Cabecera: nombre del sitio y navegación principal -->
+        <header>
+            <div class="cabecera">
+                <a class="logo" href="index.html">Aurora Reformas</a>
+                <nav aria-label="Navegación principal">
+                    <ul>
+                        <!-- aria-current marca la página activa y activa su estilo en el CSS -->
+                        <li><a href="index.html" aria-current="page">Inicio</a></li>
+                        <li><a href="views/galeria.html">Galería</a></li>
+                        <li><a href="views/presupuesto.html">Presupuesto</a></li>
+                        <li><a href="views/contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Contenido principal de la página de inicio -->
+        <main>
+            <h1>Reformas integrales con diseño y garantía</h1>
+
+            <!-- Apartado 1: presentación del estudio (texto + imagen con pie) -->
+            <section class="presentacion">
+                <div>
+                    <h2>Quiénes somos</h2>
+                    <p>Aurora Reformas es un estudio madrileño con más de quince años de experiencia transformando viviendas y locales comerciales. Nos encargamos de todo el proceso: proyecto, licencias, obra y decoración.</p>
+                    <p>Trabajamos con un único interlocutor y un presupuesto cerrado, para que sepas desde el primer día cuánto va a costar y cuándo estará terminada tu reforma.</p>
+                    <a class="boton" href="views/presupuesto.html">Solicita tu presupuesto</a>
+                </div>
+                <figure>
+                    <img src="assets/img/imagen1.png" alt="Ilustración de un salón de paredes crema con un sofá verde azulado junto a un ventanal" width="900" height="600">
+                    <figcaption>Salón reformado con iluminación natural y mobiliario a medida.</figcaption>
+                </figure>
+            </section>
+
+            <!-- Apartado 2: servicios (tarjetas con listas) -->
+            <section>
+                <h2>Nuestros servicios</h2>
+                <div class="tarjetas">
+                    <article class="tarjeta">
+                        <h3>Reforma integral</h3>
+                        <ul>
+                            <li>Demolición y albañilería</li>
+                            <li>Fontanería y electricidad</li>
+                            <li>Suelos, pintura y carpintería</li>
+                        </ul>
+                    </article>
+                    <article class="tarjeta">
+                        <h3>Cocinas y baños</h3>
+                        <ul>
+                            <li>Diseño en 3D previo a la obra</li>
+                            <li>Mobiliario y sanitarios a medida</li>
+                            <li>Impermeabilización garantizada</li>
+                        </ul>
+                    </article>
+                    <article class="tarjeta">
+                        <h3>Locales comerciales</h3>
+                        <ul>
+                            <li>Adecuación a la normativa</li>
+                            <li>Rotulación e iluminación</li>
+                            <li>Obra en horarios sin afectar al negocio</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Apartado 3: proceso de trabajo (lista ordenada) -->
+            <section>
+                <h2>Cómo trabajamos</h2>
+                <ol class="pasos">
+                    <li>Visita gratuita a tu vivienda y toma de medidas.</li>
+                    <li>Propuesta de diseño y presupuesto cerrado en cinco días.</li>
+                    <li>Gestión de permisos y planificación de la obra.</li>
+                    <li>Ejecución con seguimiento semanal y entrega de llaves.</li>
+                </ol>
+            </section>
+
+            <!-- Apartado 4: tarifas orientativas (tabla de datos) -->
+            <section>
+                <h2>Tarifas orientativas</h2>
+                <div class="contenedor-tabla">
+                    <table>
+                        <caption>Precios aproximados por metro cuadrado, IVA no incluido</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Tipo de reforma</th>
+                                <th scope="col">Plazo medio</th>
+                                <th scope="col">Desde</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Reforma integral</th>
+                                <td>10 a 14 semanas</td>
+                                <td>550 €/m²</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Cocina completa</th>
+                                <td>3 a 5 semanas</td>
+                                <td>900 €/m²</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Baño completo</th>
+                                <td>2 a 3 semanas</td>
+                                <td>1.100 €/m²</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Apartado 5: testimonio de cliente (cita) -->
+            <section>
+                <h2>Lo que dicen nuestros clientes</h2>
+                <blockquote>
+                    <p>Entregaron la reforma de nuestro piso dos días antes de lo previsto y sin desviarse ni un euro del presupuesto.</p>
+                    <footer>Marta L., clienta de una reforma integral</footer>
+                </blockquote>
+            </section>
+        </main>
+
+        <!-- Pie de página: redes sociales y copyright -->
+        <footer>
+            <ul class="redes">
+                <li>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/img/icono-facebook.png" alt="Perfil de Aurora Reformas en Facebook" width="64" height="64">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/img/icono-instagram.png" alt="Perfil de Aurora Reformas en Instagram" width="64" height="64">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/img/icono-youtube.png" alt="Canal de Aurora Reformas en YouTube" width="64" height="64">
+                    </a>
+                </li>
+            </ul>
+            <!-- Copyright 2026 Aurora Reformas. Todos los derechos reservados. -->
+            <p>&copy; 2026 Aurora Reformas. Todos los derechos reservados.</p>
+        </footer>
+    </body>
+</html>
